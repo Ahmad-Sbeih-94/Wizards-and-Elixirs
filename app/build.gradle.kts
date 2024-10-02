@@ -49,6 +49,8 @@ android {
 }
 
 dependencies {
+    implementation (libs.retrofit)
+    implementation(libs.converter.gson)
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
     implementation(libs.androidx.core.ktx)

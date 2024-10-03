@@ -7,8 +7,8 @@ data class ElixirDetails(
     val id: String,
     val ingredients: List<Ingredient>,
     val inventors: List<Inventor>,
-    val manufacturer: Any,
+    val manufacturer: String,
     val name: String,
     val sideEffects: String,
-    val time: Any
+    val time: String
 )

@@ -3,6 +3,7 @@ package com.wajeez.wizardsandelixirs.data.local.model
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
+import com.wajeez.wizardsandelixirs.data.repository.model.ElixirsUIModel
 
 @Entity(
     tableName = "elixirs",
@@ -18,3 +19,5 @@ data class ElixirEntity(
     val name: String,
     val wizardId: String // Foreign key reference to WizardEntity
 )
+
+fun ElixirEntity.toView() = ElixirsUIModel(id = this.id, name = this.name)

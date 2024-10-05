@@ -29,7 +29,7 @@ class WizardsRepoImpl @Inject constructor(
                     id = wizard.id,
                     firstName = wizard.firstName,
                     lastName = wizard.lastName,
-                    elixirs = elixirs.map { it.name })
+                    elixirs = elixirs.map { it.toView() })
             } else {
                 null
             }

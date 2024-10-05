@@ -4,5 +4,5 @@ data class WizardDetailsUIModel(
     val id: String,
     val firstName: String?,
     val lastName: String?,
-    val elixirs: List<String>
+    val elixirs: List<ElixirsUIModel>
 )

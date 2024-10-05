@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Wizards and Elixirs</string>
+    <string name="retry">Retry</string>
+    <string name="effect">Effect: %1$s</string>
+    <string name="difficulty">Difficulty: %1$s</string>
+    <string name="characteristics">Characteristics: %1$s</string>
+    <string name="ingredients">Ingredients:</string>
+    <string name="inventors">Inventors:</string>
+    <string name="manufacturer">Manufacturer: %1$s</string>
+    <string name="side_effects">Side Effects: %1$s</string>
+    <string name="preparation_time">Preparation Time: %1$s</string>
+    <string name="elixirs_created">Elixirs Created:</string>
 </resources>

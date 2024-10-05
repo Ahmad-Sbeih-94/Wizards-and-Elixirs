@@ -1,5 +1,7 @@
 package com.wajeez.wizardsandelixirs.di
 
+import com.wajeez.wizardsandelixirs.data.repository.ElixirsRepo
+import com.wajeez.wizardsandelixirs.data.repository.ElixirsRepoImpl
 import com.wajeez.wizardsandelixirs.data.repository.WizardsRepo
 import com.wajeez.wizardsandelixirs.data.repository.WizardsRepoImpl
 import dagger.Binds
@@ -14,4 +16,9 @@ abstract class ReposModule {
     abstract fun bindWizardsRepo(
         wizardsRepoImpl: WizardsRepoImpl
     ): WizardsRepo
+
+    @Binds
+    abstract fun bindElixirsRepo(
+        elixirsRepoImpl: ElixirsRepoImpl
+    ): ElixirsRepo
 }

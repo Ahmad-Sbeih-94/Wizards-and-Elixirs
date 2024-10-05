@@ -1,5 +1,6 @@
 package com.wajeez.wizardsandelixirs.data.local
 
+import com.wajeez.wizardsandelixirs.data.local.model.ElixirDetailsEntity
 import com.wajeez.wizardsandelixirs.data.local.model.ElixirEntity
 import com.wajeez.wizardsandelixirs.data.local.model.WizardEntity
 import kotlinx.coroutines.Dispatchers
@@ -9,7 +10,8 @@ import javax.inject.Inject
 
 class LocalDataSource @Inject constructor(
     private val wizardDao: WizardDao,
-    private val elixirDao: ElixirDao
+    private val elixirDao: ElixirDao,
+    private val elixirDetailsDao: ElixirDetailsDao
 ) {
     suspend fun insertWizards(wizards: List<WizardEntity>) =
         withContext(Dispatchers.IO) { wizardDao.insertWizards(wizards) }
@@ -23,7 +25,9 @@ class LocalDataSource @Inject constructor(
 
     fun getElixirsForWizard(wizardId: String): Flow<List<ElixirEntity>> = elixirDao.getElixirsForWizard(wizardId)
 
-    suspend fun getElixirById(elixirId: String): ElixirEntity? {
-        return elixirDao.getElixirById(elixirId)
-    }
+    suspend fun insertElixirDetails(elixirDetails: ElixirDetailsEntity) =
+        withContext(Dispatchers.IO) { elixirDetailsDao.insertElixirDetails(elixirDetails) }
+
+    fun getElixirDetailsById(elixirId: String): Flow<ElixirDetailsEntity?> =
+        elixirDetailsDao.getElixirDetailsById(elixirId)
 }

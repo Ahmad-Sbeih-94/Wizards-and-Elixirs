@@ -10,11 +10,11 @@ data class ElixirDetailsEntity(
     val name: String,
     val effect: String,
     val difficulty: String,
-    val characteristics: String,
+    val characteristics: String?,
     val ingredients: List<IngredientEntity>,
     val inventors: List<InventorEntity>,
     val manufacturer: String?,
-    val sideEffects: String,
+    val sideEffects: String?,
     val time: String?
 )
 

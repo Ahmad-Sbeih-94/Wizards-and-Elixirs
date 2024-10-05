@@ -6,6 +6,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "inventors")
 data class InventorEntity(
     @PrimaryKey val id: String,
-    val firstName: String,
+    val firstName: String?,
     val lastName: String
 )

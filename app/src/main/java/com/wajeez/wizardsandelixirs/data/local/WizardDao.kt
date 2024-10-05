@@ -16,5 +16,5 @@ interface WizardDao {
     fun getAllWizards(): Flow<List<WizardEntity>>
 
     @Query("SELECT * FROM wizards WHERE id = :wizardId")
-    suspend fun getWizardById(wizardId: String): WizardEntity
+    fun getWizardById(wizardId: String): Flow<WizardEntity?>
 }
